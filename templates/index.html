@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <form action="/search" method="post">
+        <input name="autocomplete" type="text" id="autocomplete" class="form-control input-lg" autofocus=""/>
+        <input type="submit" value="Search"/>
+    </form>
+
+    {% if imdb != "" %}
+        <p>Title: {{ what }}</p>
+        <p>IMDB: {{ imdb }}</p>
+    {% endif %}
+{% endblock %}

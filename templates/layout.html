@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="En">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Todos</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link href="../static/jquery-ui.css" rel="Stylesheet"></link>
+    <script src="../static/__code.jquery.com_jquery-2.2.0.js"></script>
+    <script src="../static/__code.jquery.com_ui_1.10.2_jquery-ui.js" ></script>
+
+    <script type="text/javascript">
+    $(function() {
+        $("#autocomplete").autocomplete({
+            source:function(request, response) {
+                $.getJSON("{{url_for('autocomplete')}}",{
+                    q: request.term, // in flask, "q" will be the argument to look for using request.args
+                }, function(data) {
+                    response(data.matching_results); // matching_results from jsonify
+                });
+            },
+            minLength: 3,
+            select: function(event, ui) {
+                console.log(ui.item.value); // not in your question, but might help later
+            }
+        });
+    })
+    </script>
+</head>
+<body>
+<h1>Sub vocs</h1>
+{% block body %}
+
+{% endblock %}
+</body>
+</html>

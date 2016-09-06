@@ -1,0 +1,12 @@
+*{
+    background-color: beige;
+}
+
+h1{
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+ol{
+    font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+    border: 0px solid blue;
+}
