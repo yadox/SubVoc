@@ -32,7 +32,7 @@ def setup_app():
                     <value><string>yadoxo</string></value>
                 </param>
                 <param>
-                    <value><string>BossaNova203</string></value>
+                    <value><string>***</string></value>
                 </param>
                 <param>
                     <value><string>en</string></value>
